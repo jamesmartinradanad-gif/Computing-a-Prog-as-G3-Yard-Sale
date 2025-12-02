@@ -1,0 +1,81 @@
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Regular.otf') format('opentype');
+                  font-weight: 400;
+                  font-style: normal;
+                  font-display: swap; /* this is to make sure hindi weird yung pagka loading nung font kasi kung wala toh, invisible lng yung text before magload yung font */
+            }
+
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Bold.otf') format('opentype');
+                  font-weight: 700;
+                  font-style: normal;
+                  font-display: swap;
+            }
+
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Black.otf') format('opentype');
+                  font-weight: 900;
+                  font-style: normal;
+                  font-display: swap;
+            }
+
+            * {
+                  font-family: 'CookieRun', 'Courier New', monospace;
+            }
+
+            .Container {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  padding: 20px;
+      
+            }
+      
+           .wrapper {
+                  display: flex;
+                  justify-content: center;
+                  align-items: flex-start;
+                  padding-bottom: 20px;
+                  gap: 20px;
+            }
+
+            .cards {
+                  /* make each card a vertical flex container so children stack
+                     and can be centered as a group */
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center; /* center title + description + image */
+                  gap: 8px;
+                  width: 170px; /* card width (adjust if you want larger/smaller cards) */
+                  border: solid 2px lightgray;
+                  padding: 12px; /* padding on the parent moves all children inward */
+                  background: transparent;
+            }
+
+            .cards img {
+                  width: 100%;
+                  max-width: fit-content;
+                  height: auto;
+                  max-height: fit-content;
+                  object-fit: cover;
+                  margin: 0;
+                  padding: 0; /* remove large padding on the image so it doesn't visually push things */
+                  display: block;
+            }
+
+            .cards .title {
+                  font-weight: 700;
+                  color: #ffffff;
+                  text-align: center;
+                  padding: 5px 10px 15px 10px;
+            }
+
+            .cards .description {
+                  color: #e8e0e0;
+                  text-align: center;
+                  font-size: 0.7rem;
+                  padding: 5px 10px 15px 10px;
+            }

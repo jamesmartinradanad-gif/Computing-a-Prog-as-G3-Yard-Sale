@@ -4,55 +4,51 @@
 <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Hello World</title>
+      <title>G3's Yard Sale</title>
       <link rel="stylesheet" href="css/Main.css">
+</head>
 
 <body>
       <div class="sidebar">
-            <button> Home </button>
-            <button> Samara </button>
-            <button> Aramas </button>
-            <button> zzzzzzzzzzzzz </button>
-            <button> Home </button>
+            <a href="Home.html" target="frame" oncontextmenu="return false"> Home </a>
+            <div class="dropdown">
+                  <a class="dropbutton"> Samara </a>
+                  <div class="dropdown-content">
+                        <a href="#" class="content" target="frame">Shoes</a>
+                        <a href="#" class="content" target="frame">Bag</a>
+                        <a href="#" class="content" target="frame">Shirt</a>
+                        <a href="#" class="content" target="frame">Exclusives</a>
+                  </div>
+            </div>
+            <div class="dropdown">
+                  <a class="dropbutton"> Samara </a>
+                  <div class="dropdown-content">
+                        <a href="#" class="content" target="frame">Shoes</a>
+                        <a href="#" class="content" target="frame">Bag</a>
+                        <a href="#" class="content" target="frame">Shirt</a>
+                        <a href="#" class="content" target="frame">Exclusives</a>
+                  </div>
+            </div>
+            <div class="dropdown">
+                  <a class="dropbutton"> Samara </a>
+                  <div class="dropdown-content">
+                        <a href="#" class="content" target="frame">Shoes</a>
+                        <a href="#" class="content" target="frame">Bag</a>
+                        <a href="#" class="content" target="frame">Shirt</a>
+                        <a href="#" class="content" target="frame">Exclusives</a>
+                  </div>
+            </div>
       </div>
       <div class="menubar">
             <h1> G3's Yard Sale </h1>
-            <button> Home </button>
-            <button> Samara </button>
-            <button> Aramas </button>
-            <button> zzzzzzzzzzzzz </button>
-            <button> Home </button>
+            <a href="Home.html" target="frame"> Home </a>
+            <a href="#">Samara</a>
+            <a href="#"> Aramas </a>
+            <a href="#"> zzzzzzzzzzzzz </a>
+            <a href="Home.html" target="frame"> Home </a>
       </div>
-      <div class="Content">
-            <table>
-                  <tr>
-                        <td class="Card">
-                              <div>
-                                    HI, Hello, Goodbye
-                              </div>
-                        </td>
-                        <td class="Card">
-                              <div>
-                                    HI, Hello, Goodbye
-                              </div>
-                        </td>
-                        <td class="Card">
-                              <div>
-                                    HI, Hello, Goodbye
-                              </div>
-                        </td>
-                        <td class="Card">
-                              <div>
-                                    HI, Hello, Goodbye
-                              </div>
-                        </td>
-                        <td class="Card">
-                              <div>
-                                    HI, Hello, Goodbye
-                              </div>
-                        </td>
-                  </tr>
-            </table>
+      <div class="mainframe">
+            <iframe name="frame" src="Home.html" height="100%" width="100%" style="border: none;"></iframe>
       </div>
 </body>
 

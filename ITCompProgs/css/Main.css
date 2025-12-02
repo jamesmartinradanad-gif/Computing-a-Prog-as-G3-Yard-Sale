@@ -1,4 +1,9 @@
-@font-face {
+            * {
+                  box-sizing: border-box;
+                  margin: 0;
+                  padding: 0;
+            }
+            @font-face {
                   font-family: 'CookieRun';
                   src: url('fonts/CookieRun Regular.otf') format('opentype');
                   font-weight: 400;
@@ -41,14 +46,16 @@
                   align-items: center; /* essentially, fancier version of text-align center for centering things horizontally. Partner nito ang justify-content pero ibang direction and ano nun */
             }
 
-            .sidebar button {
-                  font-family: 'CookieRun';
+            .sidebar a {
                   font-weight: 700;
                   margin: 5px 0;
                   padding: 8px 12px;
                   color: #222222;
                   cursor: pointer;
                   background-color: #f5e6c5;
+                  text-decoration: none;
+                  display: inline-block;
+                  border: 3px solid #222222;
             }
 
             .menubar {
@@ -63,15 +70,13 @@
             }
 
             .menubar h1 {
-                  font-family: 'CookieRun';
                   font-weight: 900;
                   margin-left: 10px;
                   padding: 0;
                   color: #faf3e1;
             }
 
-            .menubar button {
-                  font-family: 'CookieRun';
+            .menubar a {
                   font-weight: 700;
                   margin: 0;
                   margin-right: auto;
@@ -79,37 +84,50 @@
                   padding: 8px 12px;
                   color: #222222;
                   background-color: #f5e6c5;
+                  text-decoration: none;
+                  display: inline-block;
                   align-content: center;
                   cursor: pointer;
+                  border: 3px solid #222222;
             }
 
-            .Content {
-                  margin-left: 148px;
-                  margin-top: 74px;
-                  padding: 20px;
+            .sidebar .dropdown {
+                  display: inline-block;
             }
 
-            .Content table {
-                  margin-left: auto;
-                  margin-right: auto;
-                  border-collapse: collapse;
-                  width: 100%;
+            .sidebar .dropdown:hover .dropdown-content {
+                  display: block;
             }
 
-            .Card {
-                  flex: 1; /* this is to make sure the table datas have equal width */
-                  text-align: center;
-                  padding: 10px;
+            .sidebar .dropdown-content {
+                  display: none;
+            }
+            .sidebar .dropdown-content .content {
+                  color: #faf3e1;
+                  background-color: #222222;
+                  padding: 12px 10px;
+                  text-decoration: none;
+                  display: block;
             }
 
-            .Card div {
-                  width: 100%;
-                  margin: 10px auto;
-                  border-radius: 10px;
-                  overflow: hidden;
-                  background-color: #faf3e1;
-                  display: grid;
-                  padding: 10px;
-                  box-sizing: border-box; /* this is to prevent overflow ie. overlap with the table data */
-                  align-items: center;
+
+            .mainframe {
+                  position: fixed;
+                  left: 148px;
+                  top: 74px;
+                  right: 0;
+                  bottom: 0;
+                  width: auto;
+                  height: auto;
+                  border: none;
+                  display: block;
             }
+
+            @media (max-width: 700px) {
+            .mainframe {
+                  left: 0;
+                  top: 74px;
+            }
+            }
+
+            
