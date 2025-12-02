@@ -1,0 +1,166 @@
+            * {
+                  box-sizing: border-box;
+                  margin: 0;
+                  padding: 0;
+            }
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Regular.otf') format('opentype');
+                  font-weight: 400;
+                  font-style: normal;
+                  font-display: swap; /* this is to make sure hindi weird yung pagka loading nung font kasi kung wala toh, invisible lng yung text before magload yung font */
+            }
+
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Bold.otf') format('opentype');
+                  font-weight: 700;
+                  font-style: normal;
+                  font-display: swap;
+            }
+
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Black.otf') format('opentype');
+                  font-weight: 900;
+                  font-style: normal;
+                  font-display: swap;
+            }
+
+            body {
+                  font-family: 'CookieRun', 'Courier New', monospace;
+                  background-color: #222222;
+            }
+
+            .sidebar {
+                  background-color: #faf3e1;
+                  display: flex;
+                  flex-direction: column; /* this is to make sure the things in the sidebar are displayed top to bottom */
+                  position: fixed;
+                  left: 0; /* yung mga flat directions na may 0 is ano, para laging naka dikit yung specific content nayun sa side nayun */
+                  top: 0;
+                  bottom: 0;
+                  width: 148px;
+                  margin: 0px;
+                  padding: 74px 0 0 0;
+                  align-items: center; /* essentially, fancier version of text-align center for centering things horizontally. Partner nito ang justify-content pero ibang direction and ano nun */
+            }
+
+            .sidebar button {
+                  font-family: 'CookieRun';
+                  font-weight: 700;
+                  margin: 5px 0;
+                  padding: 8px 12px;
+                  color: #222222;
+                  cursor: pointer;
+                  background-color: #f5e6c5;
+            }
+
+            .menubar {
+                  background-color: #ff6e1f;
+                  display: flex;
+                  align-items: center;
+                  position: fixed;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  height: 74px;
+            }
+
+            .menubar h1 {
+                  font-family: 'CookieRun';
+                  font-weight: 900;
+                  margin-left: 10px;
+                  padding: 0;
+                  color: #faf3e1;
+            }
+
+            .menubar button {
+                  font-family: 'CookieRun';
+                  font-weight: 700;
+                  margin: 0;
+                  margin-right: auto;
+                  margin-left: auto;
+                  padding: 8px 12px;
+                  color: #222222;
+                  background-color: #f5e6c5;
+                  align-content: center;
+                  cursor: pointer;
+            }
+
+            .Container {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  margin-left: 148px;
+                  margin-top: 74px;
+                  padding: 20px;
+      
+            }
+
+            .wrapper {
+                  display: flex;
+                  justify-content: center;
+                  align-items: flex-start;
+                  min-height: 100vh;
+                  gap: 20px;
+            }
+
+            .cards {
+                  /* make each card a vertical flex container so children stack
+                     and can be centered as a group */
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center; /* center title + description + image */
+                  gap: 8px;
+                  width: 170px; /* card width (adjust if you want larger/smaller cards) */
+                  border: solid 2px lightgray;
+                  padding: 12px; /* padding on the parent moves all children inward */
+                  background: transparent;
+            }
+
+            .cards img {
+                  width: 100%;
+                  height: auto;
+                  object-fit: cover;
+                  margin: 0;
+                  padding: 0; /* remove large padding on the image so it doesn't visually push things */
+                  display: block;
+            }
+
+            .cards .title {
+                  font-family: 'CookieRun';
+                  font-weight: 700;
+                  color: #ffffff;
+                  text-align: center;
+            }
+
+            .cards .description {
+                  font-family: 'CookieRun';
+                  color: #e8e0e0;
+                  text-align: center;
+                  font-size: 0.7rem;
+            }
+
+            .cards .description, .cards .title {
+                  padding: 5px 10px 15px 10px;
+            }
+
+            .sidebar .dropdown {
+                  display: inline-block;
+            }
+
+            .sidebar .dropdown-content {
+                  display: none;
+                  background-color: #222222;;
+            }
+            .sidebar .dropdown-content a {
+                  color: white;
+                  padding: 12px 10px;
+                  text-decoration: none;
+                  display: block;
+            }
+
+            .sidebar .dropdown:hover .dropdown-content {
+                  display: block;
+            }
