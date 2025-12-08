@@ -27,9 +27,17 @@
                   font-display: swap;
             }
 
-            body {
+            html, body {
                   font-family: 'CookieRun', 'Courier New', monospace;
                   background-color: #222222;
+                  margin: 0;
+                  padding: 0;
+                  height: auto;
+                  overflow-x: hidden;
+            }
+
+            body {
+                  display: block;
             }
 
             .sidebar {
@@ -44,9 +52,10 @@
                   margin: 0px;
                   padding: 74px 0 0 0;
                   align-items: center; /* essentially, fancier version of text-align center for centering things horizontally. Partner nito ang justify-content pero ibang direction and ano nun */
+                  border-right: 1px solid #222222;
             }
 
-            .sidebar a {
+            .sidebar .dropbutton {
                   font-weight: 700;
                   margin: 5px 0;
                   padding: 8px 12px;
@@ -56,6 +65,8 @@
                   text-decoration: none;
                   display: inline-block;
                   border: 3px solid #222222;
+                  width: 125px;
+                  font-size: 15px;
             }
 
             .menubar {
@@ -102,25 +113,33 @@
             .sidebar .dropdown-content {
                   display: none;
             }
+
             .sidebar .dropdown-content .content {
                   color: #faf3e1;
                   background-color: #222222;
                   padding: 12px 10px;
                   text-decoration: none;
                   display: block;
+                  font-size: 15px;
+                  max-width: 100px;
+                  margin: 0;
+                  margin-right: auto;
+                  margin-left: auto;
+            }
+
+            .sidebar .dropdown-content .content:hover {
+                  transform: scale(1.05);
             }
 
 
             .mainframe {
-                  position: fixed;
-                  left: 148px;
-                  top: 74px;
-                  right: 0;
-                  bottom: 0;
-                  width: auto;
-                  height: auto;
+                  margin-left: 148px;
+                  margin-top: 74px;
+                  width: calc(100% - 148px);
+                  height: 100vh;
                   border: none;
-                  display: block;
+                  display: flex;
+                  overflow: hidden;
             }
 
             @media (max-width: 700px) {
@@ -128,6 +147,16 @@
                   left: 0;
                   top: 74px;
             }
+            }
+
+            .site-footer{ 
+            background:#1f1f1f; 
+            color:#fff; 
+            padding:18px 48px; 
+            text-align:center;  
+            height: 54px;
+            width: 100%;
+            margin-left: 74px;
             }
 
             

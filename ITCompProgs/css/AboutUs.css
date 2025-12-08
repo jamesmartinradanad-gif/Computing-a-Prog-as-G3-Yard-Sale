@@ -1,0 +1,50 @@
+            * {
+                  box-sizing: border-box;
+                  margin: 0;
+                  padding: 0;
+            }
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Regular.otf') format('opentype');
+                  font-weight: 400;
+                  font-style: normal;
+                  font-display: swap; /* this is to make sure hindi weird yung pagka loading nung font kasi kung wala toh, invisible lng yung text before magload yung font */
+            }
+
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Bold.otf') format('opentype');
+                  font-weight: 700;
+                  font-style: normal;
+                  font-display: swap;
+            }
+
+            @font-face {
+                  font-family: 'CookieRun';
+                  src: url('fonts/CookieRun Black.otf') format('opentype');
+                  font-weight: 900;
+                  font-style: normal;
+                  font-display: swap;
+            }
+
+            body {
+                  background-color: #222222;
+                  font-family: 'CookieRun', Courier, monospace;
+                  color: #faf3e1;
+            }
+
+            h1 {
+                  text-align: center;
+                  margin-top: 10px;
+            }
+
+            hr {
+                  max-width: 50%;
+                  color: #faf3e1;
+                  margin: auto;
+            }
+
+            p {
+                  text-align: center;
+                  margin-top: 10px;
+            }

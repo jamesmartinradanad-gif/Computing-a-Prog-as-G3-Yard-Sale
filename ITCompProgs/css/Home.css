@@ -26,56 +26,163 @@
                   font-family: 'CookieRun', 'Courier New', monospace;
             }
 
+            html, body {
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  flex-direction: column;
+                  height: auto;
+            }
+
+            section {
+                  display: flex;
+                  flex-direction: column;
+                  flex: 1;
+            }
+
+            h1 {
+                  color: #faf3e1;
+                  margin-left: 60px;
+            }
+
             .Container {
                   display: flex;
                   flex-wrap: wrap;
                   justify-content: center;
                   padding: 20px;
-      
             }
-      
-           .wrapper {
+
+            .wrapper {
                   display: flex;
                   justify-content: center;
                   align-items: flex-start;
-                  padding-bottom: 20px;
-                  gap: 20px;
+                  gap: 60px;
             }
 
             .cards {
-                  /* make each card a vertical flex container so children stack
-                     and can be centered as a group */
                   display: flex;
                   flex-direction: column;
-                  align-items: center; /* center title + description + image */
-                  gap: 8px;
-                  width: 170px; /* card width (adjust if you want larger/smaller cards) */
+                  align-items: center; 
+                  width: 170px;
+                  height: 340px; 
                   border: solid 2px lightgray;
-                  padding: 12px; /* padding on the parent moves all children inward */
+                  padding: 12px; 
                   background: transparent;
+                  transform: transition 0.3s ease-in-out;
+            }
+
+            .cards:hover {
+                  transform: scale(1.05);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                  border: 4px solid lightgray;
             }
 
             .cards img {
                   width: 100%;
-                  max-width: fit-content;
                   height: auto;
-                  max-height: fit-content;
                   object-fit: cover;
                   margin: 0;
-                  padding: 0; /* remove large padding on the image so it doesn't visually push things */
+                  padding: 0; 
                   display: block;
             }
 
+            .cards .barney-swap {
+                  width: 100%;
+                  height: 240px;
+                  margin: 0;
+                  padding: 0;
+                  background-image: url('images/Barney_WideShot.png');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  transform: transition 0.3s ease-in-out;
+            }
+
+            .cards .barney-swap:hover {
+                  background-image: url('images/Barney_CloseUpShot.png');
+                  transform: transition 1s ease-in-out;
+            }
+
+            .cards .cap-swap {
+                  width: 100%;
+                  height: 240px;
+                  margin: 0;
+                  padding: 0;
+                  background-image: url('images/Barney_WideShot.png');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+            }
+
+               .cards .cap-swap:hover {
+                     background-image: url('images/Barney_CloseUpShot.png');
+            }
+
+            .cards .dark-blue-shirt-swap {
+                  width: 100%;
+                  height: 240px;
+                  margin: 0;
+                  padding: 0;
+                  background-image: url('images/Barney_WideShot.png');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+            }
+
+               .cards .dark-blue-shirt-swap:hover {
+                     background-image: url('images/Barney_CloseUpShot.png');
+            }
+
             .cards .title {
+                  font-family: 'CookieRun';
                   font-weight: 700;
                   color: #ffffff;
                   text-align: center;
-                  padding: 5px 10px 15px 10px;
             }
 
             .cards .description {
+                  font-family: 'CookieRun';
                   color: #e8e0e0;
                   text-align: center;
                   font-size: 0.7rem;
+            }
+
+            .cards .description, .cards .title {
                   padding: 5px 10px 15px 10px;
+            }
+            
+
+            .sidebar .dropdown {
+                  display: inline-block;
+            }
+
+            .sidebar .dropdown-content {
+                  display: none;
+                  background-color: #222222;;
+            }
+            .sidebar .dropdown-content a {
+                  color: white;
+                  padding: 12px 10px;
+                  text-decoration: none;
+                  display: block;
+            }
+
+            .sidebar .dropdown:hover .dropdown-content {
+                  display: block;
+            }
+
+            .card-link {
+                  text-decoration: none;
+                  color: inherit;
+            }
+
+            /* Hide scrollbars inside iframe content but keep scrolling */
+            html, body {
+                  overflow-y: auto;
+                  overflow-x: auto;
+            }
+            html::-webkit-scrollbar, body::-webkit-scrollbar {
+                  display: none; /* Chrome, Safari, Edge */
+                  width: 0;
+                  height: 0;
             }
