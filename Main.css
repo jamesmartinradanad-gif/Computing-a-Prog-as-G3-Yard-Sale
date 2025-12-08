@@ -107,16 +107,20 @@
             }
 
             .cards {
-                  /* make each card a vertical flex container so children stack
-                     and can be centered as a group */
                   display: flex;
                   flex-direction: column;
-                  align-items: center; /* center title + description + image */
-                  gap: 8px;
-                  width: 170px; /* card width (adjust if you want larger/smaller cards) */
+                  align-items: center; 
+                  width: 170px; 
                   border: solid 2px lightgray;
-                  padding: 12px; /* padding on the parent moves all children inward */
+                  padding: 12px; 
                   background: transparent;
+                  transform: transition 0.3s ease-in-out;
+            }
+
+            .cards:hover {
+                  transform: scale(1.05);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                  border: 4px solid lightgray;
             }
 
             .cards img {
@@ -124,8 +128,55 @@
                   height: auto;
                   object-fit: cover;
                   margin: 0;
-                  padding: 0; /* remove large padding on the image so it doesn't visually push things */
+                  padding: 0; 
                   display: block;
+            }
+
+            .cards .barney-swap {
+                  width: 100%;
+                  height: 140px;
+                  margin: 0;
+                  padding: 0;
+                  background-image: url('../images/Barney_WideShot.png');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  transform: transition 0.3s ease-in-out;
+            }
+
+            .cards .barney-swap:hover {
+                  background-image: url('../images/Barney_CloseUpShot.png');
+                  transform: transition 1s ease-in-out;
+            }
+
+            .cards .cap-swap {
+                  width: 100%;
+                  height: 140px;
+                  margin: 0;
+                  padding: 0;
+                  background-image: url('../images/Cap_WideShot.png');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+            }
+
+             .cards .cap-swap:hover {
+                  background-image: url('../images/Cap_CloseUpShot.png');
+            }
+
+            .cards .dark-blue-shirt-swap {
+                  width: 100%;
+                  height: 140px;
+                  margin: 0;
+                  padding: 0;
+                  background-image: url('../images/DarkBlueShirt_WideShot.png');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+            }
+
+             .cards .dark-blue-shirt-swap:hover {
+                  background-image: url('../images/DarkBlueShirt_CloseUpShot.png');
             }
 
             .cards .title {
@@ -145,6 +196,7 @@
             .cards .description, .cards .title {
                   padding: 5px 10px 15px 10px;
             }
+            
 
             .sidebar .dropdown {
                   display: inline-block;
@@ -164,3 +216,9 @@
             .sidebar .dropdown:hover .dropdown-content {
                   display: block;
             }
+
+            .card-link {
+                  text-decoration: none;
+                  color: inherit;
+            }
+
