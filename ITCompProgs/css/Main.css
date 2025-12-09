@@ -60,13 +60,13 @@
                   margin: 5px 0;
                   padding: 8px 12px;
                   color: #222222;
-                  cursor: pointer;
                   background-color: #f5e6c5;
                   text-decoration: none;
                   display: inline-block;
                   border: 3px solid #222222;
                   width: 125px;
                   font-size: 15px;
+                  pointer-events: none;
             }
 
             .menubar {
@@ -88,7 +88,7 @@
             }
 
             .menubar a {
-                  font-weight: 700;
+                  font-weight: 900;
                   margin: 0;
                   margin-right: auto;
                   margin-left: auto;
@@ -100,6 +100,13 @@
                   align-content: center;
                   cursor: pointer;
                   border: 3px solid #222222;
+                  width: 150px;
+                  font-size: 23px;
+                  text-align: center;
+            }
+
+            .menubar a:hover {
+                  transform: scale(1.05);
             }
 
             .sidebar .dropdown {

@@ -86,52 +86,68 @@
                   display: block;
             }
 
-            .cards .barney-swap {
+            .cards .barney {
                   width: 100%;
                   height: 240px;
                   margin: 0;
                   padding: 0;
-                  background-image: url('images/Barney_WideShot.png');
+                  background-image: url('images/FW/3.png');
                   background-size: cover;
                   background-position: center;
                   background-repeat: no-repeat;
                   transform: transition 0.3s ease-in-out;
             }
 
-            .cards .barney-swap:hover {
-                  background-image: url('images/Barney_CloseUpShot.png');
+            .cards .barney:hover {
+                  background-image: url('images/FC/26.png');
                   transform: transition 1s ease-in-out;
             }
 
-            .cards .cap-swap {
+            .cards .autograph {
                   width: 100%;
                   height: 240px;
                   margin: 0;
                   padding: 0;
-                  background-image: url('images/Barney_WideShot.png');
+                  background-image: url('images/LS/Autograph_Item/AutographFront_WideShot.png');
                   background-size: cover;
                   background-position: center;
                   background-repeat: no-repeat;
             }
 
-               .cards .cap-swap:hover {
-                     background-image: url('images/Barney_CloseUpShot.png');
+               .cards .autograph:hover {
+                     background-image: url('images/LS/Autograph_Item/Autograph_CloseUpShot.png');
             }
 
-            .cards .dark-blue-shirt-swap {
+            .cards .stoic {
                   width: 100%;
                   height: 240px;
                   margin: 0;
                   padding: 0;
-                  background-image: url('images/Barney_WideShot.png');
+                  background-color: white;
+                  background-image: url('images/MW/LettersFromAStoicBook_WideShot.png');
                   background-size: cover;
                   background-position: center;
                   background-repeat: no-repeat;
             }
 
-               .cards .dark-blue-shirt-swap:hover {
-                     background-image: url('images/Barney_CloseUpShot.png');
+               .cards .stoic:hover {
+                     background-image: url('images/MC/LettersFromAStoicBook_CloseUpShot.png');
             }
+
+            .cards .ray {
+                  width: 100%;
+                  height: 240px;
+                  margin: 0;
+                  padding: 0;
+                  background-image: url('images/RW/Rayquaza_WideShot.jpg');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+            }
+
+               .cards .ray:hover {
+                     background-image: url('images/RC/Rayquaza_CloseUp.jpg');
+               }
 
             .cards .title {
                   font-family: 'CookieRun';
